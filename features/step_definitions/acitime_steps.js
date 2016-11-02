@@ -1,24 +1,23 @@
 'use strict'
 
 const page = {
-  'Features': {xpath: '//*[@id="nav-features"]/a'},
-  'subMenu': (linkText) => ({xpath: `//*[@id="nav-features"]//a[text()="${linkText}"]`}),
+  'menu': (menuLinkText) => ({xpath: `//*[@id="navigation-list"]//a[text()="${menuLinkText}"]`}),
+  'subMenu': (submenuLinkText) => ({xpath: `//*[@id="nav-features"]//a[text()="${submenuLinkText}"]`}),
   'heading': {css: 'h1'}
 }
 
-const retries = 5
-const hoverDelay = 1000
+const hoverDelay = 500
 
 module.exports = function () {
-  this.When(/^I hover over the "([^"]*)" menu link$/, function hoverMenuLinkStep (link) {
-    return this.hover(page[link], hoverDelay, retries)
-  })
-
-  this.When(/^I click the "([^"]*)" submenu link$/, function clickSubmenuLinkStep (linkText) {
-    return this.click(page.subMenu(linkText), retries)
-  })
-
   this.Then(/^I expect the heading to be "([^"]*)"$/, function checkHeadingStep (text) {
-    return this.getText(page.heading, retries).should.eventually.equal(text)
+    return this.getText(page.heading).should.eventually.equal(text)
   })
+
+  this.When(/^I click "([^"]*)" link within "([^"]*)"$/, function (submenuHeaderText, submenuLinkText) {
+    return this.whenExists(page.subMenu(submenuHeaderText))
+      .then(() => Promise.all([
+        this.hover(page.menu(submenuLinkText), hoverDelay),
+        this.click(page.subMenu(submenuHeaderText))
+      ]))
+  });
 }
