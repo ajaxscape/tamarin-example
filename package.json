@@ -23,6 +23,6 @@
     "cucumber": "^1.3.1",
     "lodash": "^4.16.4",
     "standard": "^8.3.0",
-    "tamarin": "^1.0.14"
+    "tamarin": "^1.0.17"
   }
 }
