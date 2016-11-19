@@ -10,4 +10,3 @@ module.exports = function () {
       .then(() => authenticationPage.signInTestUser(this))
   })
 }
-

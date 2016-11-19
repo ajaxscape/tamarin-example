@@ -9,4 +9,3 @@ const page = {
 }
 
 module.exports = Object.freeze(page)
-

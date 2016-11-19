@@ -10,4 +10,3 @@ const driver = new webDriver.Builder()
   .build()
 
 module.exports = driver
-
