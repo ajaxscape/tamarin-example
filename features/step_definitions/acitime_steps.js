@@ -19,5 +19,5 @@ module.exports = function () {
         this.hover(page.menu(submenuLinkText), hoverDelay),
         this.click(page.subMenu(submenuHeaderText))
       ]))
-  });
+  })
 }

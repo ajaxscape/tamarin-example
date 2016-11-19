@@ -27,4 +27,3 @@ function signInTestUser (world) {
 }
 
 module.exports = Object.freeze(page)
-
