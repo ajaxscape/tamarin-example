@@ -24,6 +24,6 @@
     "lodash": "^4.16.4",
     "standard": "^8.3.0",
     "tamarin": "^1.0.20",
-    "tamarin-dom-sleuth": "^0.0.3"
+    "tamarin-dom-sleuth": "^0.0.4"
   }
 }
