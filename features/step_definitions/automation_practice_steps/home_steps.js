@@ -10,5 +10,5 @@ module.exports = function () {
     return this.waitFor(homePage.productContainer)
       .then(() =>
         this.select(homePage.productList, homePage.productContainer.css).should.eventually.have.lengthOf(count))
-  });
+  })
 }
