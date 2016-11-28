@@ -1,6 +1,5 @@
 'use strict'
 
-const _ = require('lodash')
 const pages = '../../automation_practice_features/pages'
 const homePage = require(`${pages}/home`)
 
