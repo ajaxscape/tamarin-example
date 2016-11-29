@@ -16,9 +16,9 @@ module.exports = function () {
         .then((data) => {
           let base64Data = data.replace(/^data:image\/pngbase64,/, '')
           try {
-            fs.accessSync(screenShotDir);
+            fs.accessSync(screenShotDir)
           } catch (e) {
-            fs.mkdirSync(screenShotDir);
+            fs.mkdirSync(screenShotDir)
           }
           fs.writeFile(path.join(screenShotDir, sanitize(scenario.getName() + '_' + Date.now() + '.png').replace(/ /g, '_')), base64Data, 'base64', (err) => {
             if (err) {
