@@ -1,4 +1,6 @@
-<img align="left" src="https://raw.githubusercontent.com/ajaxscape/tamarin/master/tamarin.png" width="256px">
+<a href="https://github.com/ajaxscape/tamarin">
+    <img align="left" src="https://raw.githubusercontent.com/ajaxscape/tamarin/master/tamarin.png" width="256px">
+</a>
 
 #tamarin-example
 
