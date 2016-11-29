@@ -4,6 +4,6 @@ Feature: Sign in to
 
   Scenario: Sign in Unsuccessfully
     Given I visit the home page
-    Then I should see 7 products
+    Then I should see 6 products
     And I sign in with the test user
     Then I expect to see the text "Authentication failed."
