@@ -6,7 +6,7 @@ const authenticationPage = require(`${pages}/authentication`)
 
 module.exports = function () {
   this.Given(/^I sign in with the test user$/, function () {
-    return this.click(homePage.signIn)
+    return this.click(homePage.masthead.signIn)
       .then(() => authenticationPage.signInTestUser(this))
   })
 }
