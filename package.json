@@ -1,6 +1,6 @@
 {
   "name": "tamarin-example",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -25,7 +25,7 @@
     "sanitize-filename": "^1.6.1",
     "selenium-webdriver": "^3.0.1",
     "standard": "^8.3.0",
-    "tamarin": "^1.0.23",
+    "tamarin": "^1.0.24",
     "tamarin-dom-sleuth": "^0.0.4"
   }
 }
