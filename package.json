@@ -25,7 +25,7 @@
     "sanitize-filename": "^1.6.1",
     "selenium-webdriver": "^3.0.1",
     "standard": "^8.3.0",
-    "tamarin": "^1.0.24",
+    "tamarin": "git://github.com/ajaxscape/tamarin.git#extend-webelement",
     "tamarin-dom-sleuth": "^0.0.4"
   }
 }
