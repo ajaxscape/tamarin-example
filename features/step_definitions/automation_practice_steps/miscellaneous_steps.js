@@ -5,7 +5,7 @@ const pages = '../../automation_practice_features/pages'
 
 module.exports = function () {
   this.Given(/^I visit the ([^"]*) page$/, function (page) {
-    const pageObject = require(`${pages}/${_.snakeCase(page)}`)
+    const pageObject = require(`${pages}/${_.snakeCase(page)}`)(this)
     return this.visit(pageObject.url)
   })
 

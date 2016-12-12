@@ -10,7 +10,7 @@ module.exports = function () {
   this.World = require('./world').World // overwrite default World constructor
   this.setDefaultTimeout(3600000)
 
-  this.After(function (scenario, next) {
+  this.After(function (scenario) {
     if (scenario.isFailed()) {
       driver.takeScreenshot()
         .then((data) => {
@@ -27,8 +27,7 @@ module.exports = function () {
           })
         })
     }
-    driver.manage().deleteAllCookies()
-      .then(() => next())
+    return driver.manage().deleteAllCookies()
   })
 
   this.AfterFeatures(function () {

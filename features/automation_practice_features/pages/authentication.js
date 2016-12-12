@@ -3,27 +3,29 @@
 const { host, baseUrl, testUser } = require('../config')
 const url = `${host + baseUrl}?controller=athentication`
 
-const page = {
-  url,
-  title: 'Login - My Store',
-  email: { id: 'email' },
-  password: { id: 'passwd' },
-  login: { id: 'SubmitLogin' },
-  signIn,
-  signInTestUser
-}
+module.exports = function (world) {
+  const page = {
+    url,
+    title: 'Login - My Store',
+    email: { id: 'email' },
+    password: { id: 'passwd' },
+    login: { id: 'SubmitLogin' },
+    signIn,
+    signInTestUser
+  }
 
-function signIn (world, { email, password }) {
-  return world.waitForTitle(page.title)
-    .then(() => Promise.all([
-      world.sendKeys(page.email, email),
-      world.sendKeys(page.password, password)
-    ]))
-    .then(() => world.click(page.login, 50))
-}
+  function signIn ({ email, password }) {
+    return world.waitForTitle(page.title)
+      .then(() => Promise.all([
+        world.sendKeys(page.email, email),
+        world.sendKeys(page.password, password)
+      ]))
+      .then(() => world.click(page.login, 50))
+  }
 
-function signInTestUser (world) {
-  return signIn(world, testUser)
-}
+  function signInTestUser () {
+    return signIn(testUser)
+  }
 
-module.exports = Object.freeze(page)
+  return page
+}
