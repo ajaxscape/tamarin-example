@@ -27,5 +27,5 @@ module.exports = function (world) {
     return signIn(testUser)
   }
 
-  return page
+  return Object.freeze(page)
 }

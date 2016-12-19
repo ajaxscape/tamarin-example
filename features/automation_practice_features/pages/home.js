@@ -8,7 +8,8 @@ module.exports = function (world) {
     url,
     productList: { css: '.product_list' },
     productContainer: { css: '.ajax_block_product' },
-    masthead: require('../pageSections/masthead')
+    masthead: (locator) => world.findElement(locator)
+      .then((el) => require('../pageSections/masthead')(el))
   }
-  return page
+  return Object.freeze(page)
 }

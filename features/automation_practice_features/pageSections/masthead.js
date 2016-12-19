@@ -1,6 +1,7 @@
+'use strict'
 
-const masthead = {
-  signIn: { css: 'a.login' }
+module.exports = function (element) {
+  return {
+    signIn: element.waitFor({ css: 'a.login' })
+  }
 }
-
-module.exports = Object.freeze(masthead)
