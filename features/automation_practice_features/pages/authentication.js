@@ -19,7 +19,7 @@ function signIn (world, { email, password }) {
       world.sendKeys(page.email, email),
       world.sendKeys(page.password, password)
     ]))
-    .then(() => world.click(page.login))
+    .then(() => world.click(page.login, 50))
 }
 
 function signInTestUser (world) {

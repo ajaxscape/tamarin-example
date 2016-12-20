@@ -5,9 +5,9 @@ const url = host + baseUrl
 
 const page = {
   url,
-  signIn: { css: 'a.login' },
   productList: { css: '.product_list' },
-  productContainer: { css: '.ajax_block_product' }
+  productContainer: { css: '.ajax_block_product' },
+  masthead: require('../pageSections/masthead')
 }
 
 module.exports = Object.freeze(page)

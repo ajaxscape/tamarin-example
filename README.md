@@ -11,3 +11,11 @@
   <a href="https://david-dm.org/ajaxscape/tamarin-example"><img src="https://david-dm.org/ajaxscape/tamarin-example/status.svg" alt="dependencies status"></a>
   <a href="https://david-dm.org/ajaxscape/tamarin-example"><img src="https://david-dm.org/ajaxscape/tamarin-example/dev-status.svg" alt="devDependencies status"></a>
 </p>
+
+This example combines [tamarin]('https://www.npmjs.com/package/tamarin') and [cucumberjs]('https://www.npmjs.com/package/cucumber')
+
+__Install and run tests__
+
+```bash
+npm install && npm test
+```
